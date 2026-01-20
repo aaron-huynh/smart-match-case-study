@@ -20,8 +20,8 @@ pm-portfolio/
 │   ├── 05-concept.html
 │   ├── 06-guardrails.html
 │   └── 07-whats-next.html
-├── images/             # Add your doodles here (create this folder)
-│   └── (your images)
+├── images/            
+│   └── images
 └── README.md
 ```
 
