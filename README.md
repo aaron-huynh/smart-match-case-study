@@ -3,6 +3,10 @@
 
 A single-page portfolio presenting an exploratory case study on Employment Hero's Smart Match feature.
 
+Please enjoy this little snippet of what I've made hosted on github pages. 
+
+Otherwise, you can read the full report [here](https://docs.google.com/document/d/172kIlPCfOWjzP-einxLW5Fp1NuWgEf7eoPLe7AZdfho)!
+
 ## 📁 Project Structure
 
 ```
