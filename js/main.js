@@ -9,6 +9,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const navDots = document.querySelectorAll('.nav-dot');
     const pages = document.querySelectorAll('.page');
     const scrollIndicator = document.getElementById('scrollIndicator');
+    const themeToggle = document.getElementById('themeToggle');
+
+    /**
+     * Theme Toggle
+     */
+    function initTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = '☀️';
+        }
+    }
+
+    function toggleTheme() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        if (isDark) {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            themeToggle.textContent = '🌙';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            themeToggle.textContent = '☀️';
+        }
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+    initTheme();
 
     /**
      * Update active navigation dot based on scroll position
