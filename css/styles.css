@@ -17,6 +17,20 @@
     --font-body: 'Nunito', sans-serif;
 }
 
+/* Dark mode colors */
+[data-theme="dark"] {
+    --color-bg: #1a1a2e;
+    --color-paper: #252542;
+    --color-text: #e8e8e8;
+    --color-text-light: #a0a0a0;
+    --color-pink: #ff8a95;
+    --color-yellow: #ffd93d;
+    --color-blue: #6eb5ff;
+    --color-green: #7dce7d;
+    --color-purple: #b896ff;
+    --color-orange: #ffb07a;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -175,6 +189,27 @@ nav {
     background: var(--color-pink);
     border-style: solid;
     transform: rotate(-2deg) scale(1.05);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px dashed var(--color-text-light);
+    background: var(--color-paper);
+    cursor: pointer;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    border-style: solid;
+    border-color: var(--color-yellow);
+    transform: rotate(20deg) scale(1.1);
 }
 
 /* ===========================================
@@ -708,6 +743,12 @@ footer a:hover::after {
     .nav-link {
         font-size: 0.85rem;
         padding: 0.4rem 0.75rem;
+    }
+
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
     }
 
     .logo {
